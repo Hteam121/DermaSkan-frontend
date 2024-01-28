@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import CombinedComponent from './components/Home';
-import ResultComponent from './components/ResultComponent';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './components/Home';
 import Logo from './components/Logo';
-import { collection, addDoc } from 'firebase/firestore';
-import { firestore } from './firebase'; // Make sure this path is correct
+import Signin from './components/auth/Signin';
+import SignUp from './components/auth/Signup';
+import AuthDetails from './components/Authdetails';
+import { addDoc, collection } from 'firebase/firestore'; // Make sure these are correctly imported
+import { firestore } from './firebase'; // Adjust the path if necessary
+import Results from './components/ResultComponent';
 import './App.css';
 
 function App() {
   const [result, setResult] = useState(null);
   const [showReportForm, setShowReportForm] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+
 
   const handleRecapture = () => {
     setResult(null);
@@ -17,6 +23,10 @@ function App() {
 
   const handleReport = () => {
     setShowReportForm(true);
+  };
+
+  const onLoginSuccess = () => {
+    setIsLoggedIn(true);
   };
 
   const handleReportSubmit = async (reportData) => {
@@ -40,19 +50,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Logo />
-      {result && !showReportForm ? (
-        <ResultComponent
-          result={result}
-          onRecapture={handleRecapture}
-          onReport={handleReport}
-        />
-      ) : null}
-      {!result ? (
-        <CombinedComponent onResults={setResult} />
-      ) : null}
-    </div>
+    <Router>
+      <div className="App">
+        <Logo />
+        <Routes>
+          <Route path="/signin" element={<Signin onLoginSuccess={onLoginSuccess} />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/authdetails" element={<AuthDetails />} />
+          <Route path="/home" element={isLoggedIn ? <Home onResults={setResult} /> : <Navigate to="/signin" replace />} />
+          <Route path="/" element={isLoggedIn ? <Navigate to="/home" replace /> : <Navigate to="/signin" replace />} />
+          <Route path="/results" element={<Results />} /> 
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

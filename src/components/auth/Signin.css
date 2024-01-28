@@ -1,0 +1,41 @@
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100vh;
+  }
+  
+  .sign-in-form {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .sign-in-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sign-in-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 2px solid purple; /* Set the outline color */
+    border-radius: 5px;
+  }
+  
+  .sign-in-form button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-in-form button:hover {
+    background-color: #8a2be2; /* Change the color on hover if needed */
+  }
+  
