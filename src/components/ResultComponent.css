@@ -1,0 +1,240 @@
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f7f7; /* A lighter shade for background */
+    background-image: linear-gradient(to right top, #e6e6e6, #efefef); /* Subtle gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif; /* Change as per your preference */
+
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .result-container .status {
+    font-size: 24px; /* Larger font size for status */
+    font-weight: bold; /* Optional: makes the text bold */
+    margin-bottom: 10px; /* Spacing below the status text */
+    /* Add any other styles you want for the status */
+  }
+  
+  .result-halal, .result-container.result-halal {
+    background-color: #28a745 !important; /* Green background for halal */
+    color: black !important; /* Black text */
+  }
+  
+  .result-haram, .result-container.result-haram {
+    background-color: #dc3545 !important; /* Red background for haram */
+    color: white !important; /* White text */
+  }
+  
+
+  .result-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333; /* Darker color for heading */
+  }
+  
+  .result-container p {
+    font-size: 18px;
+    color: #555; /* Slightly lighter color for text */
+  }
+  
+  /* Additional styles for status and explanation, including icons */
+  .result-container p strong {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .button-77 {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex; /* Changed to inline-flex to center the svg icon */
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01, sans-serif; /* Replace with your font if Eina01 is not available */
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 19px 26px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+  }
+
+  .button-77:before,
+  .button-77:after {
+    border-radius: 80px;
+  }
+  
+  .button-77:before {
+    background-color: rgba(249, 58, 19, .32);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  .button-77:after {
+    background-color: initial;
+    background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+  }
+  
+  .button-77:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+  }
+  
+  .button-77:active:not(:disabled) {
+    color: #ccc;
+  }
+  
+  .button-77:active:not(:disabled):after {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+  }
+  
+  .button-77:disabled {
+    cursor: default;
+    opacity: .24;
+  }
+
+.recapture-button {
+    margin-top: 30px !important;
+    align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: #ff7426; /* The background color for the button */
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: 'Eina01', sans-serif; /* Make sure you have this font or replace it */
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+  
+  /* Additional styles for the upload button */
+  border-radius: 30px; /* Adjust to match the design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.report-button {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background-color: #ffcc00; /* Caution-like color */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Optional: Add styles for hover effect */
+.report-button:hover {
+  background-color: #ffdd55;
+}
+
+
+  /* Responsive design considerations */
+  @media (max-width: 600px) {
+    .result-container {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+
+    .result-container {
+      max-height: 40vh; 
+      overflow-y: auto;
+      margin-bottom: 200px;
+    }
+    
+    .result-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .result-container::-webkit-scrollbar-thumb {
+      background: #ccc; 
+      border-radius: 3px;
+    }
+  
+    .recapture-button {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+  }
