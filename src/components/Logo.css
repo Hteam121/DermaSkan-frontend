@@ -1,0 +1,28 @@
+@keyframes pulse {
+    from {
+       transform: scale(1);
+    }
+    to {
+       transform: scale(1.05);
+    }
+}
+
+.logo-svg {
+    animation: pulse 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    width: 400px;
+    height: 400px;
+    margin-top: -4vh;
+    margin-bottom: -11vh;
+}
+
+@media (max-width: 680px)  {
+    .logo-svg {
+        width: 400px; /* Adjust size as needed for mobile */
+        height: 400px;
+        margin: 0 auto; /* Center the logo horizontally */
+        display: block; /* Ensure the logo is a block element for margin auto to work */
+        margin-bottom: -75px; /* Adjust margin-bottom as needed */
+        margin-top: -55px !important;
+    }
+}
